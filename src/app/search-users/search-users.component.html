@@ -1,0 +1,26 @@
+<div class="row">
+<h1>{{title}}</h1>
+<form >
+	<div class="form-group">
+		<input type="text" #place name="place" class="form-control" (keyup.enter)="searchIt(place.value)">
+
+	</div>
+
+
+
+<!-- <div class="form-group">
+		<input type="button"  name="place" class="btn btn-primary"  value="submit">
+
+	</div> -->
+</form>
+	<div *ngFor ="let items of resultone" class="col-sm-3 panel panel-success"> 
+<h3 class="panel-heading user-login"><a href="{{items.html_url}}" target="_blank">{{items.login}}</a></h3>
+<div class="panel-body">
+<a href="{{items.html_url}}" target="_blank"><img src="{{items.avatar_url}}"></a>
+
+<div><a href="{{items.html_url}}?tab=repositories" target="_blank">Repositories</a></div>
+</div>
+	</div>
+
+
+</div>
